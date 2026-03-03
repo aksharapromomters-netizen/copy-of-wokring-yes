@@ -9,7 +9,7 @@ const Landing: React.FC = () => {
       <section className="relative pt-32 pb-40 px-6 overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-100/50 rounded-full blur-[140px] -mr-96 -mt-96"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-rose-50/50 rounded-full blur-[120px] -ml-64 -mb-64"></div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col items-center text-center">
             <span className="px-6 py-2 rounded-full bg-white border border-slate-100 shadow-xl shadow-slate-200/50 text-[10px] font-black uppercase tracking-[0.4em] text-indigo-600 mb-10 animate-in fade-in slide-in-from-top-4">
@@ -21,7 +21,7 @@ const Landing: React.FC = () => {
             <p className="text-xl md:text-2xl text-slate-500 max-w-2xl font-medium leading-relaxed mb-16 animate-in fade-in slide-in-from-bottom-12 duration-1000">
               Etiquette LMS transforms mandatory workplace training into an interactive narrative experience. High stakes, higher engagement.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-300">
               <Link to="/login" className="px-16 py-8 bg-slate-900 text-white rounded-[40px] font-black uppercase text-[12px] tracking-[0.3em] hover:bg-indigo-600 transition-all shadow-[0_30px_60px_-15px_rgba(79,70,229,0.5)] active:scale-95">
                 Launch Workspace
@@ -39,25 +39,25 @@ const Landing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-12 rounded-[56px] bg-slate-50 border border-slate-100 group hover:bg-indigo-600 transition-all duration-700">
-               <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">🎨</div>
-               <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Visual Narrative</h3>
-               <p className="text-slate-500 group-hover:text-indigo-100 font-medium leading-relaxed">
-                 Replace dry slides with interactive comic modules. Branching storylines where your choices define the legal outcome.
-               </p>
+              <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">🎨</div>
+              <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Visual Narrative</h3>
+              <p className="text-slate-500 group-hover:text-indigo-100 font-medium leading-relaxed">
+                Replace dry slides with interactive comic modules. Branching storylines where your choices define the legal outcome.
+              </p>
             </div>
             <div className="p-12 rounded-[56px] bg-slate-50 border border-slate-100 group hover:bg-emerald-500 transition-all duration-700">
-               <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">🛡️</div>
-               <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Knowledge Audits</h3>
-               <p className="text-slate-500 group-hover:text-emerald-50 font-medium leading-relaxed">
-                 Mandatory examination modules for regulatory verification. Master statutory requirements, pass final certification exams, and earn your official workplace credentials.
-               </p>
+              <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">🛡️</div>
+              <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Knowledge Audits</h3>
+              <p className="text-slate-500 group-hover:text-emerald-50 font-medium leading-relaxed">
+                Mandatory examination modules for regulatory verification. Master statutory requirements, pass final certification exams, and earn your official workplace credentials.
+              </p>
             </div>
             <div className="p-12 rounded-[56px] bg-slate-50 border border-slate-100 group hover:bg-rose-500 transition-all duration-700">
-               <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">📊</div>
-               <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Admin Intel</h3>
-               <p className="text-slate-500 group-hover:text-rose-50 font-medium leading-relaxed">
-                 A centralized command center for HR. Track workforce compliance, manage certifications, and export granular audit data.
-               </p>
+              <div className="text-5xl mb-10 group-hover:scale-110 transition-transform">📊</div>
+              <h3 className="text-3xl font-black text-slate-900 group-hover:text-white mb-6 tracking-tight">Admin Intel</h3>
+              <p className="text-slate-500 group-hover:text-rose-50 font-medium leading-relaxed">
+                A centralized command center for HR. Track workforce compliance, manage certifications, and export granular audit data.
+              </p>
             </div>
           </div>
         </div>
@@ -68,12 +68,12 @@ const Landing: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div>
-               <h2 className="text-5xl font-black text-slate-900 tracking-tighter mb-4">Enterprise Grade Content</h2>
-               <p className="text-xl text-slate-400 font-medium italic">Our curriculum covers all mandatory global and local legal standards.</p>
+              <h2 className="text-5xl font-black text-slate-900 tracking-tighter mb-4">Enterprise Grade Content</h2>
+              <p className="text-xl text-slate-400 font-medium italic">Our curriculum covers all mandatory global and local legal standards.</p>
             </div>
             <Link to="/catalog" className="text-indigo-600 font-black uppercase text-[11px] tracking-[0.4em] hover:underline">See Entire Catalog →</Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {COURSES.slice(0, 4).map(course => (
               <div key={course.id} className="p-10 rounded-[48px] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all group">
@@ -86,73 +86,69 @@ const Landing: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section (Same as standalone for consistency) */}
+      {/* Pricing Section */}
       <section id="pricing" className="py-40 px-6 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-indigo-500/10 rounded-full blur-[160px]"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-24">
-             <h2 className="text-6xl font-black tracking-tighter mb-6 italic font-['Bangers']">Scale Your Integrity</h2>
-             <p className="text-indigo-300 font-medium text-lg">Transparent pricing for organizations of any size.</p>
+            <h2 className="text-6xl font-black tracking-tighter mb-6 italic font-['Bangers']">Scale Your Integrity</h2>
+            <p className="text-indigo-300 font-medium text-lg">Simple per-employee pricing — pick the experience that fits your team.</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Startup */}
-            <div className="p-14 rounded-[64px] border border-white/10 bg-white/5 backdrop-blur-xl">
-               <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-4">Starter</p>
-               <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-5xl font-black text-white">₹999</span>
-                  <span className="text-slate-400 font-bold">/year</span>
-               </div>
-               <ul className="space-y-6 mb-12 text-sm font-bold text-slate-300">
-                  <li className="flex items-center gap-3">✓ Up to 50 employees</li>
-                  <li className="flex items-center gap-3">✓ Full Library Access</li>
-                  <li className="flex items-center gap-3">✓ Standard Certifications</li>
-               </ul>
-               <button className="w-full py-6 rounded-[32px] border-2 border-white/20 font-black uppercase text-[11px] tracking-widest hover:bg-white hover:text-slate-900 transition-all">Start 14-Day Trial</button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* Digital Package */}
+            <div className="p-14 rounded-[64px] border border-white/10 bg-white/5 backdrop-blur-xl flex flex-col">
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-4">Digital</p>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-5xl font-black text-white">₹200</span>
+                <span className="text-slate-400 font-bold">/employee</span>
+              </div>
+              <p className="text-xs text-indigo-400 font-black uppercase tracking-widest mb-10">Includes 4 Courses</p>
+              <ul className="space-y-6 mb-12 text-sm font-bold text-slate-300 flex-grow">
+                <li className="flex items-center gap-3">✓ 4 Compliance Courses</li>
+                <li className="flex items-center gap-3">✓ Online Self-Paced Learning</li>
+                <li className="flex items-center gap-3">✓ Verified PDF Certificates</li>
+                <li className="flex items-center gap-3">✓ Admin Progress Dashboard</li>
+              </ul>
+              <button className="w-full py-6 rounded-[32px] border-2 border-white/20 font-black uppercase text-[11px] tracking-widest hover:bg-white hover:text-slate-900 transition-all">Get Started</button>
             </div>
 
-            {/* Business - Recommended */}
-            <div className="p-14 rounded-[64px] bg-indigo-600 shadow-[0_40px_80px_-20px_rgba(79,70,229,0.5)] transform lg:scale-110">
-               <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-200 mb-4">Growth (Popular)</p>
-               <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-5xl font-black text-white">₹2,499</span>
-                  <span className="text-indigo-200 font-bold">/year</span>
-               </div>
-               <ul className="space-y-6 mb-12 text-sm font-bold">
-                  <li className="flex items-center gap-3">✓ Up to 250 employees</li>
-                  <li className="flex items-center gap-3">✓ Advanced Admin Analytics</li>
-                  <li className="flex items-center gap-3">✓ Verified Transcripts</li>
-                  <li className="flex items-center gap-3">✓ Priority Support</li>
-               </ul>
-               <button className="w-full py-6 rounded-[32px] bg-white text-indigo-600 font-black uppercase text-[11px] tracking-widest hover:bg-indigo-50 transition-all shadow-2xl">Upgrade Now</button>
-            </div>
-
-            {/* Enterprise */}
-            <div className="p-14 rounded-[64px] border border-white/10 bg-white/5 backdrop-blur-xl">
-               <p className="text-[10px] font-black uppercase tracking-[0.4em] text-rose-400 mb-4">Enterprise</p>
-               <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-5xl font-black text-white">Custom</span>
-               </div>
-               <ul className="space-y-6 mb-12 text-sm font-bold text-slate-300">
-                  <li className="flex items-center gap-3">✓ Unlimited Users</li>
-                  <li className="flex items-center gap-3">✓ White-Label Branding</li>
-                  <li className="flex items-center gap-3">✓ SCORM/LMS Integration</li>
-               </ul>
-               <button className="w-full py-6 rounded-[32px] border-2 border-white/20 font-black uppercase text-[11px] tracking-widest hover:bg-white hover:text-slate-900 transition-all">Contact Sales</button>
+            {/* In-Person Package */}
+            <div className="p-14 rounded-[64px] bg-indigo-600 shadow-[0_40px_80px_-20px_rgba(79,70,229,0.5)] flex flex-col relative">
+              <div className="absolute top-0 right-0 p-8">
+                <span className="bg-white/20 text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest">Most Popular</span>
+              </div>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-200 mb-4">In-Person</p>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-5xl font-black text-white">₹499</span>
+                <span className="text-indigo-200 font-bold">/employee</span>
+              </div>
+              <p className="text-xs text-indigo-200 font-black uppercase tracking-widest mb-10">Includes 4 Courses + Live Sessions</p>
+              <ul className="space-y-6 mb-12 text-sm font-bold flex-grow">
+                <li className="flex items-center gap-3">✓ 4 Compliance Courses</li>
+                <li className="flex items-center gap-3">✓ Online Self-Paced Learning</li>
+                <li className="flex items-center gap-3">✓ Verified PDF Certificates</li>
+                <li className="flex items-center gap-3">✓ Admin Progress Dashboard</li>
+                <li className="flex items-center gap-3">✓ In-Person Expert Sessions</li>
+                <li className="flex items-center gap-3">✓ Employee Performance Optimization</li>
+              </ul>
+              <button className="w-full py-6 rounded-[32px] bg-white text-indigo-600 font-black uppercase text-[11px] tracking-widest hover:bg-indigo-50 transition-all shadow-2xl">Book In-Person Plan</button>
             </div>
           </div>
+
+          <p className="text-center text-slate-500 text-sm font-bold mt-16">Need something custom? <Link to="/pricing" className="text-indigo-400 hover:text-white transition-colors">View full pricing details →</Link></p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-100 text-center">
-         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-xl font-black text-slate-900 flex items-center gap-3 tracking-tighter">
-              <div className="h-8 w-8 bg-slate-900 rounded-xl flex items-center justify-center text-white text-sm font-['Bangers'] italic">E</div>
-              <span>Etiquette <span className="text-indigo-600 italic">LMS</span></span>
-            </div>
-            <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">© 2024 Etiquette Intelligence Inc. All rights reserved.</p>
-         </div>
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-xl font-black text-slate-900 flex items-center gap-3 tracking-tighter">
+            <div className="h-8 w-8 bg-slate-900 rounded-xl flex items-center justify-center text-white text-sm font-['Bangers'] italic">E</div>
+            <span>Etiquette <span className="text-indigo-600 italic">LMS</span></span>
+          </div>
+          <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">© 2024 Etiquette Intelligence Inc. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );

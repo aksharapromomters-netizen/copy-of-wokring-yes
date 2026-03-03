@@ -30,10 +30,24 @@ const Navigation: React.FC<{ onLogout: () => void }> = ({ onLogout }) => {
       <nav className="glass border-b border-slate-200 sticky top-0 z-50 h-20 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex justify-between items-center">
-            <Link to="/" className="text-2xl font-black text-slate-900 flex items-center gap-3 tracking-tighter">
-              <div className="h-10 w-10 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-xl shadow-indigo-100 font-['Bangers'] tracking-normal italic">E</div>
-              <span className="hidden sm:inline">Etiquette <span className="text-indigo-600 italic">LMS</span></span>
-            </Link>
+            <div className="flex items-center gap-10">
+              <Link to="/" className="text-2xl font-black text-slate-900 flex items-center gap-3 tracking-tighter">
+                <div className="h-10 w-10 bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-xl shadow-indigo-100 font-['Bangers'] tracking-normal italic">E</div>
+                <span className="hidden sm:inline">Etiquette <span className="text-indigo-600 italic">LMS</span></span>
+              </Link>
+              {!loading && (
+                <div className="flex items-center space-x-8 border-l border-slate-200 pl-8">
+                  <Link to="/" className={`text-[10px] font-black uppercase tracking-widest transition-colors ${location.pathname === '/' ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>Home</Link>
+                  <Link to="/catalog" className={`text-[10px] font-black uppercase tracking-widest transition-colors ${location.pathname === '/catalog' ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>Catalog</Link>
+                  <Link to="/pricing" className={`text-[10px] font-black uppercase tracking-widest transition-colors ${location.pathname === '/pricing' ? 'text-indigo-600' : 'text-slate-400 hover:text-indigo-600'}`}>Pricing</Link>
+                </div>
+              )}
+            </div>
+            {!loading && (
+              <Link to="/login" className="px-4 py-2 rounded-full text-[9px] font-black uppercase tracking-widest transition-all border border-slate-200 bg-white text-slate-500 hover:bg-slate-50">
+                Sign In
+              </Link>
+            )}
           </div>
         </div>
       </nav>
