@@ -398,3 +398,11 @@ app.post('/api/xp', authenticateToken, async (req: any, res) => {
 
 // Export for Vercel serverless
 export default app;
+
+// Start server if not in serverless environment
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}

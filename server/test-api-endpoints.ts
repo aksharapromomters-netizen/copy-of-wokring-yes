@@ -22,7 +22,7 @@ async function testEndpoints() {
     });
     
     if (loginResponse.ok) {
-      const data = await loginResponse.json();
+      const data = await loginResponse.json() as { token: string };
       token = data.token;
       console.log('   ✅ Login successful');
       console.log('   Token received:', token ? 'Yes' : 'No');
@@ -47,7 +47,7 @@ async function testEndpoints() {
     });
     
     if (profileResponse.ok) {
-      const profile = await profileResponse.json();
+      const profile = await profileResponse.json() as { name: string; role: string; email: string; xp: number };
       console.log('   ✅ Profile retrieved');
       console.log('   User:', profile.name, `(${profile.role})`);
       console.log('   Email:', profile.email);
@@ -71,7 +71,7 @@ async function testEndpoints() {
     });
     
     if (profilesResponse.ok) {
-      const profiles = await profilesResponse.json();
+      const profiles = await profilesResponse.json() as any[];
       console.log('   ✅ Profiles retrieved');
       console.log('   Total users:', profiles.length);
     } else {
@@ -96,7 +96,7 @@ async function testEndpoints() {
     });
     
     if (xpResponse.ok) {
-      const result = await xpResponse.json();
+      const result = await xpResponse.json() as { xp: number };
       console.log('   ✅ XP updated');
       console.log('   New XP:', result.xp);
     } else {
