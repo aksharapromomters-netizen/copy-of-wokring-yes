@@ -9,7 +9,16 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (!loading && user && profile) {
-      const dest = profile.role === 'hr' ? '/hr' : '/employee';
+      let dest = '/employee'; // default
+      
+      if (profile.role === 'platform_admin') {
+        dest = '/admin';
+      } else if (profile.role === 'hr') {
+        dest = '/hr';
+      } else if (profile.role === 'employee') {
+        dest = '/employee';
+      }
+      
       navigate(dest, { replace: true });
     }
   }, [loading, user, profile, navigate]);
