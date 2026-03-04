@@ -36,14 +36,16 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     let mounted = true;
+    let timeoutId: NodeJS.Timeout;
 
     const init = async () => {
       console.log('[Auth] Initializing session...');
       setLoading(true);
       setProfileError(null);
 
-      const timeoutId = setTimeout(() => {
-        if (mounted && loading) {
+      // Set timeout to prevent infinite loading
+      timeoutId = setTimeout(() => {
+        if (mounted) {
           console.warn('[Auth] Initialization timed out, forcing loading=false');
           setLoading(false);
         }
@@ -53,16 +55,24 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         const token = localStorage.getItem('auth_token');
         if (token) {
           console.log('[Auth] Token found, loading profile...');
-          if (mounted) await loadProfile();
+          if (mounted) {
+            await loadProfile();
+          }
         } else {
           console.log('[Auth] No token found');
-          if (mounted) setLoading(false);
+          if (mounted) {
+            setLoading(false);
+          }
         }
       } catch (err) {
         console.error('[Auth] Initialization error:', err);
-        if (mounted) setLoading(false);
+        if (mounted) {
+          setLoading(false);
+        }
       } finally {
-        clearTimeout(timeoutId);
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
       }
     };
 
@@ -70,6 +80,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     return () => {
       mounted = false;
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
     };
   }, []);
 
